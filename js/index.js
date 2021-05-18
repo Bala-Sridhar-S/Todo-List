@@ -34,8 +34,10 @@ const handleSubmit = (e) => {
         }
         input.value = ''
         alert.classList.remove('alert-display')
+        
         todos.push(item)
         localStorage.setItem('todos', JSON.stringify(todos))
+
         select.value = 'all'
         filterTodos(select.value)
     } else {
