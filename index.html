@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Todo List</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Title -->
+        <h1 class="title">Bala's Todo List</h1>
+        <!-- Input and the categories -->
+        <div class="inputs flex">
+            <form class="input-form flex" autocomplete="off">
+                
+                <!-- Input for the form -->
+                <input type="text" name="item" id="inp-text">
+                <button type="submit" id="submit">
+                    <i class="fas fa-plus"></i>
+                </button>
+            </form>
+
+            <!-- Select menu to filter the todos -->
+            <select name="category" id="cat">
+                <option value="all">All</option>
+                <option value="completed">Completed</option>
+                <option value="uncompleted">Uncompleted</option>
+            </select>
+        </div>
+
+        <h2 class="alert">Enter a Todo</h2>
+
+        <!-- <hr> -->
+
+        <!-- Listing out the todos -->
+        <div class="list">
+            <ul id="list-ul"></ul>
+        </div>
+
+        <hr>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Project by <a href="https://github.com/Bala-Sridhar-S" target="_blank">Bala Sridhar</a></p>
+        </footer>
+    </div>
+
+    <script src="js/index.js"></script>
+</body>
+</html>

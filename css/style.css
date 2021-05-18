@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+:root{
+    --clr-primary: #FCBD6E;
+    --clr-add: #01c944;
+    --clr-remove: #e00000;
+    --clr-text: #222;
+    --clr-highlight: #ff8513;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--clr-primary);
+    color: var(--clr-text);
+    min-width: 300px;
+}
+
+.ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: var(--clr-text);
+}
+
+/* Utility Classes */
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main container */
+.container{
+    max-width: 450px;
+    text-align: center;
+    margin: 10px auto;
+}
+
+/* Title */
+.title{
+    font-weight: 500;
+    margin-top: 4em;
+    margin-bottom: 1em;
+}
+
+/* Input and the categories */
+.inputs{
+    margin: 10px auto;
+    padding: 10px;
+}
+
+.inputs.flex{
+    gap: 30px;
+}
+
+/* Input for the form */
+.input-form{
+    background-color: #fff;
+    padding: 0 6px;
+    border-radius: 5px;
+}
+
+.input-form input{
+    outline: none;
+    border: 0;
+    margin: 5px auto;
+    font-size: 1.4rem;
+}
+
+.input-form button{
+    height: 26px;
+    width: 26px;
+    outline: none;
+    border: 0;
+    background-color: var(--clr-remove);
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.input-form button i{
+    font-size: 1.4rem;
+    color: #fff;
+}
+
+/* Select menu to filter the todos */
+.inputs select{
+    outline: none;
+    border: 0;
+    padding: 6px 15px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+}
+
+.alert{
+    background-color: var(--clr-remove);
+    color: #fff;
+    padding: 6px;
+    font-weight: 400;
+    border-radius: 5px;
+    margin: 4px 10px;
+    opacity: 0;
+    height: 0;
+}
+
+.alert-display{
+    opacity: 1;
+    height: auto;
+}
+
+hr{
+    margin: 30px auto; 
+    outline: none;
+    border: 1px solid var(--clr-text);
+}
+
+/* Listing out the todos */
+.list ul li{
+    background-color: #fff;
+    margin: 10px auto;
+    transition: transform 75ms ease-in-out;
+    width: 100%;
+}
+
+.list ul li:hover{
+    transform: scale(1.01);
+    background-color: #f4f4f4;
+}
+
+.list p{
+    width: 80%;
+}
+
+.list i{
+    width: 10%;
+    cursor: pointer;
+    padding: 10px;
+    height: 100%;
+    color: #fff;
+}
+
+.list i.fa-check{
+    background-color: var(--clr-add);
+}
+
+.list i.fa-trash-alt{
+    background-color: var(--clr-remove);
+}
+
+.completed p{
+    opacity: 0.5;
+}
+
+.completed i.fa-check{
+    background-color: #ddd;
+    pointer-events: none;
+}
+
+.completed p{
+    text-decoration: line-through;
+}
+
+.list ul .completed.todo:hover{
+    transform: scale(1);
+    background-color: #fff;
+    opacity: 0.5;
+}
+
+/* Footer */
+.footer{
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Media Queries */
+/* Screen width less than 500px */
+@media screen and (max-width: 500px){
+    .container{
+        max-width: 350px;
+    }
+
+    .inputs.flex{
+        flex-direction: column;
+    }
+}
+
+/* Screen width less than 400px */
+@media screen and (max-width: 400px){
+    .container{
+        max-width: 280px;
+    }
+
+    .title{
+        margin-top: 2em;
+    }
+    
+    .input-form input{
+        font-size: 1.2rem;
+    }
+    
+    .input-form button{
+        height: 20px;
+        width: 20px;
+    }
+    
+    .input-form button i{
+        font-size: 1rem;
+        color: #fff;
+    }
+    
+    .inputs select{
+        padding: 6px 10px;
+        font-size: 1rem;
+    }
+
+    .list i{
+        padding: 6px;
+    }
+}
+
+/* Screen orientation is landscape and width less than 500px */
+@media screen and (orientation: landscape) and (max-width: 500px){
+    .title{
+        margin-top: 0.5em;
+    }
+}
